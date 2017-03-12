@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v21</xs:documentation>
-    <xs:documentation>12.3.2017 11:02:03</xs:documentation>
+    <xs:documentation>12.3.2017 11:27:54</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16276,8 +16276,11 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/timePicker1" />
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19061,8 +19064,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19125,8 +19131,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19189,8 +19198,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19253,8 +19265,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19317,8 +19332,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19615,8 +19633,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19679,8 +19700,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19743,8 +19767,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -19846,8 +19873,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -20341,8 +20371,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -20405,8 +20438,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -20469,8 +20505,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -20533,8 +20572,11 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
