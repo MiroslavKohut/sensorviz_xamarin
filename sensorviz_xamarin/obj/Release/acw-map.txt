@@ -1,0 +1,4 @@
+TextureViewCameraStream.Activity1, sensorviz_xamarin;md553e986e399e10f6b161f7b9693fbeb15.Activity1
+TextureViewCameraStream.Activity1, sensorviz_xamarin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md553e986e399e10f6b161f7b9693fbeb15.Activity1
+TextureViewCameraStream.Activity1;md553e986e399e10f6b161f7b9693fbeb15.Activity1
+textureviewcamerastream.Activity1;md553e986e399e10f6b161f7b9693fbeb15.Activity1

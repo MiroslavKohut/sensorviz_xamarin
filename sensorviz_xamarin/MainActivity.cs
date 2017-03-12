@@ -1,19 +1,66 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
+﻿using System;
 
-namespace sensorviz_xamarin
+using Android.App;
+using Android.OS;
+using Android.Views;
+using Android.Widget;
+using Android.Hardware;
+using Android.Content.PM;
+
+namespace TextureViewCameraStream
 {
-    [Activity(Label = "sensorviz_xamarin", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    [Activity(Label = "TextureViewCameraStream", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+    ScreenOrientation = ScreenOrientation.Landscape)]
+    public class Activity1 : Activity, TextureView.ISurfaceTextureListener
     {
+        Camera _camera;
+        TextureView _textureView;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            Window.RequestFeature(WindowFeatures.NoTitle);
+            _textureView = new TextureView(this);
+            _textureView.SurfaceTextureListener = this;
 
-            // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
+            SetContentView(_textureView);
         }
+
+        public void OnSurfaceTextureAvailable(Android.Graphics.SurfaceTexture surface, int w, int h)
+        {
+            _camera = Camera.Open();
+
+            _textureView.LayoutParameters = new FrameLayout.LayoutParams(w, h);
+
+            try
+            {
+                _camera.SetPreviewTexture(surface);
+                _camera.StartPreview();
+
+            }
+            catch (Java.IO.IOException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public bool OnSurfaceTextureDestroyed(Android.Graphics.SurfaceTexture surface)
+        {
+            _camera.StopPreview();
+            _camera.Release();
+
+            return true;
+        }
+
+        public void OnSurfaceTextureSizeChanged(Android.Graphics.SurfaceTexture surface, int width, int height)
+        {
+            // camera takes care of this
+        }
+
+        public void OnSurfaceTextureUpdated(Android.Graphics.SurfaceTexture surface)
+        {
+
+        }
+
     }
 }
-
