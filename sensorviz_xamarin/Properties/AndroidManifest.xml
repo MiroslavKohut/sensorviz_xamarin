@@ -3,5 +3,5 @@
 	<uses-sdk android:minSdkVersion="22" />
 	<uses-permission android:name="android.permission.CAMERA" />
 	<application android:label="sensorviz_xamarin"></application>
-  <application android:label="TextureViewCameraStream" android:hardwareAccelerated="true"/>
+	<application android:label="TextureViewCameraStream" android:hardwareAccelerated="true" />
 </manifest>

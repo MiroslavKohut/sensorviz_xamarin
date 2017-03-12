@@ -7,35 +7,56 @@ using Android.Widget;
 using Android.Hardware;
 using Android.Content.PM;
 
+using Android.Content;
+using Android.Runtime;
+
+
 namespace TextureViewCameraStream
 {
     [Activity(Label = "TextureViewCameraStream", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
     ScreenOrientation = ScreenOrientation.Landscape)]
     public class Activity1 : Activity, TextureView.ISurfaceTextureListener
     {
-        Camera _camera;
-        TextureView _textureView;
+        Camera camera;
+        TextureView textureView;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             Window.RequestFeature(WindowFeatures.NoTitle);
-            _textureView = new TextureView(this);
-            _textureView.SurfaceTextureListener = this;
+            textureView = new TextureView(this);
+            textureView.SurfaceTextureListener = this;
 
-            SetContentView(_textureView);
+            camera = Camera.Open();
+
+           // _textureView.LayoutParameters = new FrameLayout.LayoutParams(w, h);
+
+            try
+            {
+                camera.SetPreviewTexture(textureView.SurfaceTexture);
+                camera.StartPreview();
+
+            }
+            catch (Java.IO.IOException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            SetContentView(sensorviz_xamarin.Resource.Layout.Main);
+            textureView = FindViewById<TextureView>(sensorviz_xamarin.Resource.Id.textureView1);
+            textureView.SurfaceTextureListener = this;
         }
 
         public void OnSurfaceTextureAvailable(Android.Graphics.SurfaceTexture surface, int w, int h)
         {
-            _camera = Camera.Open();
+            camera = Camera.Open();
 
-            _textureView.LayoutParameters = new FrameLayout.LayoutParams(w, h);
+            textureView.LayoutParameters = new FrameLayout.LayoutParams(w, h);
 
             try
             {
-                _camera.SetPreviewTexture(surface);
-                _camera.StartPreview();
+                camera.SetPreviewTexture(surface);
+                camera.StartPreview();
 
             }
             catch (Java.IO.IOException ex)
@@ -46,8 +67,8 @@ namespace TextureViewCameraStream
 
         public bool OnSurfaceTextureDestroyed(Android.Graphics.SurfaceTexture surface)
         {
-            _camera.StopPreview();
-            _camera.Release();
+            camera.StopPreview();
+            camera.Release();
 
             return true;
         }
