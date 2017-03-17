@@ -5,13 +5,13 @@
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
     p1:id="@+id/relativeLayout1">
+<!--vlavo hore-->
     <TextureView
         p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
-        p1:layout_marginBottom="50.0dp"
+        p1:layout_height="match_parent"
+        p1:layout_marginBottom="0.0dp"
         p1:layout_marginRight="0dp"
         p1:id="@+id/textureView1" />
-<!--vlavo hore-->
     <LinearLayout
         p1:layout_width="150.0dp"
         p1:layout_height="150.0dp"
