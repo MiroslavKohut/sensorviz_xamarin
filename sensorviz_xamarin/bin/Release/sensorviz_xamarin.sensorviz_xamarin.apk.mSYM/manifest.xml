@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <mono-debug version="1">
   <app-id>sensorviz_xamarin.sensorviz_xamarin</app-id>
+<<<<<<< HEAD
   <build-date>2017-03-23T14:16:03.8213534Z</build-date>
   <build-id>730a4b9b-f2f8-4e02-a359-f0a17f11d05c</build-id>
+=======
+  <build-date>2017-03-17T17:21:59.5258778Z</build-date>
+  <build-id>bc99162a-5a4b-42ab-8d1c-fa1eefa2131b</build-id>
+>>>>>>> 211603ff704e3750ef04014b8cf9fd69ff0e4160
 </mono-debug>
