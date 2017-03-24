@@ -67,4 +67,6 @@ C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorvi
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Runtime.Serialization.dll.mdb
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Xml.dll.mdb
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\res\values\colors.xml
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\sensorviz_xamarin.dll.mdb
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\bin\Release\sensorviz_xamarin.dll.mdb

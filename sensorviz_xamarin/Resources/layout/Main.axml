@@ -4,7 +4,7 @@
     p1:minHeight="25px"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
-    p1:id="@+id/relativeLayout1">
+    p1:id="@+id/mainLayout1">
     <TextureView
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
@@ -12,14 +12,15 @@
         p1:layout_marginRight="0dp"
         p1:id="@+id/textureView1" />
 <!--vlavo hore-->
-    <LinearLayout
+  <LinearLayout
+        p1:id="@+id/compass"
         p1:layout_width="150.0dp"
         p1:layout_height="150.0dp"
         p1:layout_marginLeft="0dp"
         p1:layout_marginRight="0dp"
         p1:orientation="vertical"
         p1:background="@color/biely_layout">
-        <TextView
+    <!--TextView
             p1:text="NEJAKY TEXT"
             p1:textAppearance="?android:attr/textAppearanceMedium"
             p1:layout_width="150.0dp"
@@ -28,20 +29,12 @@
             p1:id="@+id/textView1"
             p1:layout_marginBottom="17.0dp"
             p1:layout_marginRight="28.0dp"
-            p1:visibility="visible" />
-    <!--Button
-      p1:text="NEJAKY TEXT"
-      p1:textAppearance="?android:attr/textAppearanceMedium"
-      p1:layout_width="150.0dp"
-      p1:layout_height="36.0dp"
-      p1:textColor="#000000"
-      p1:id="@+id/button1"
-      p1:layout_marginBottom="17.0dp"
-      p1:layout_marginRight="28.0dp"
-      p1:visibility="visible"/-->
+            p1:visibility="visible" /-->
+  
     </LinearLayout>
 <!--vpravo hore-->
-    <LinearLayout
+  <LinearLayout
+        p1:id="@+id/proximity"
         p1:layout_width="150.0dp"
         p1:layout_height="150.0dp"
         p1:layout_marginRight="0dp"
@@ -49,19 +42,11 @@
         p1:layout_alignParentRight="true"
         p1:orientation="vertical"
         p1:background="@color/biely_layout">
-        <TextView
-            p1:text="NEJAKY TEXT"
-            p1:textAppearance="?android:attr/textAppearanceMedium"
-            p1:layout_width="150.0dp"
-            p1:layout_height="36.0dp"
-            p1:textColor="#000000"
-            p1:id="@+id/textView1"
-            p1:layout_marginBottom="17.0dp"
-            p1:layout_marginRight="28.0dp"
-            p1:visibility="visible" />
+
     </LinearLayout>
 <!--vlavo dole-->
-    <LinearLayout
+  <LinearLayout
+        p1:id="@+id/accelerometer"
         p1:layout_width="150.0dp"
         p1:layout_height="150.0dp"
         p1:layout_marginTop="200dp"
@@ -69,35 +54,17 @@
         p1:layout_alignParentRight="true"
         p1:orientation="vertical"
         p1:background="@color/biely_layout">
-        <TextView
-            p1:text="NEJAKY TEXT"
-            p1:textAppearance="?android:attr/textAppearanceMedium"
-            p1:layout_width="150.0dp"
-            p1:layout_height="36.0dp"
-            p1:textColor="#000000"
-            p1:id="@+id/textView1"
-            p1:layout_marginBottom="17.0dp"
-            p1:layout_marginRight="28.0dp"
-            p1:visibility="visible" />
+
     </LinearLayout>
 <!--vpravo dole-->
-    <LinearLayout
-        p1:layout_width="150.0dp"
-        p1:layout_height="150.0dp"
-        p1:layout_marginTop="200dp"
-        p1:layout_alignParentRight="true"
-        p1:layout_gravity="bottom|right"
-        p1:orientation="vertical"
-        p1:background="@color/biely_layout">
-        <TextView
-            p1:text="NEJAKY TEXT"
-            p1:textAppearance="?android:attr/textAppearanceMedium"
-            p1:layout_width="150.0dp"
-            p1:layout_height="36.0dp"
-            p1:textColor="#000000"
-            p1:id="@+id/textView1"
-            p1:layout_marginBottom="17.0dp"
-            p1:layout_marginRight="28.0dp"
-            p1:visibility="visible" />
-    </LinearLayout>
+  <LinearLayout
+     p1:id="@+id/gps"
+      p1:layout_width="150.0dp"
+      p1:layout_height="150.0dp"
+      p1:layout_marginTop="200dp"
+      p1:layout_alignParentRight="true"
+      p1:layout_gravity="bottom|right"
+      p1:orientation="vertical">
+
+  </LinearLayout>
 </FrameLayout>
