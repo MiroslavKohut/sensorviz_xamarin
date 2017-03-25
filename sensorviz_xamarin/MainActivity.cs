@@ -38,8 +38,6 @@ namespace TextureViewCameraStream
             textureView = new TextureView(this);
             textureView.SurfaceTextureListener = this;
 
-            camera = Camera.Open();
-
             var sensorService = (SensorManager)GetSystemService(Context.SensorService);
 
             // Get a Light Sensor
@@ -47,20 +45,6 @@ namespace TextureViewCameraStream
 
             // Register this class a listener for light sensor
             sensorService.RegisterListener(this, lightSensor, Android.Hardware.SensorDelay.Game);
-
-
-            try
-            {
-                camera.SetPreviewTexture(textureView.SurfaceTexture);
-                camera.StartPreview();
-
-            }
-            catch (Java.IO.IOException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
 
             SetContentView(sensorviz_xamarin.Resource.Layout.Main);
             textureView = FindViewById<TextureView>(sensorviz_xamarin.Resource.Id.textureView1);
@@ -133,7 +117,7 @@ namespace TextureViewCameraStream
             {
                 proximityTextView.Text = string.Format("Brightness={0:f}", s.Values[0]);
 
-                proximityLayout.Alpha = (float)0.05 * s.Values[0];
+                proximityLayout.Alpha = (float)0.005 * s.Values[0];
 
             }
         }
