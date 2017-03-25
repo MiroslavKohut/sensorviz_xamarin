@@ -13,82 +13,50 @@ using Android.Content.PM;
 
 using Android.Content;
 using Android.Runtime;
+using sensorviz_xamarin;
 
 namespace TextureViewCameraStream
 {
     [Activity(Label = "TextureViewCameraStream", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
     ScreenOrientation = ScreenOrientation.Landscape)]
-    public class Activity1 : Activity, TextureView.ISurfaceTextureListener, Android.Hardware.ISensorEventListener
+    public class Activity1 : Activity, TextureView.ISurfaceTextureListener
     {
+        CompassView compass;
+        ProximityView proximity;
+
         Camera camera;
         TextureView textureView;
-        FrameLayout mainLayout;
-
-        static readonly object _syncLock = new object();
-        TextView proximityTextView;
-        LinearLayout proximityLayout;
-
-        TextView compassTextView;
-        LinearLayout compassLayout;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             Window.RequestFeature(WindowFeatures.NoTitle);
-            textureView = new TextureView(this);
-            textureView.SurfaceTextureListener = this;
-
-            camera = Camera.Open();
-
-            var sensorService = (SensorManager)GetSystemService(Context.SensorService);
-
-            // Get a Light Sensor
-            var lightSensor = sensorService.GetDefaultSensor(SensorType.Light);
-
-            // Register this class a listener for light sensor
-            sensorService.RegisterListener(this, lightSensor, Android.Hardware.SensorDelay.Game);
-
-
-            try
-            {
-                camera.SetPreviewTexture(textureView.SurfaceTexture);
-                camera.StartPreview();
-
-            }
-            catch (Java.IO.IOException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
-
+          
             SetContentView(sensorviz_xamarin.Resource.Layout.Main);
+
+            //add camera texture view
             textureView = FindViewById<TextureView>(sensorviz_xamarin.Resource.Id.textureView1);
             textureView.SurfaceTextureListener = this;
 
-            //add proximity layout
-            proximityLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.proximity);
-
-            proximityTextView = new TextView(proximityLayout.Context);
-            proximityTextView.Text = "proximity";
-            proximityTextView.SetBackgroundColor(Android.Graphics.Color.Yellow);
-            proximityTextView.SetTextColor(Android.Graphics.Color.DarkGray);
-
-            proximityLayout.AddView(proximityTextView);
+            //add proximity layout 
+            LinearLayout proximityLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.proximity);
+            proximity = new ProximityView(proximityLayout);
 
             //add compass layout
-            compassLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.compass);
+            LinearLayout compassLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.compass);
+            compass = new CompassView(compassLayout);
 
-            compassTextView = new TextView(compassLayout.Context);
-            compassTextView.Text = "compass";
-            compassTextView.SetBackgroundColor(Android.Graphics.Color.Yellow);
-            compassTextView.SetTextColor(Android.Graphics.Color.DarkGray);
+            //get Sensor manager
+            var sensorService = (SensorManager)GetSystemService(Context.SensorService);
+            
+            var lightSensor = sensorService.GetDefaultSensor(SensorType.Light); // Get a Light Sensor
+            var ori = sensorService.GetDefaultSensor(SensorType.Orientation);    //Get orientation
 
-            compassLayout.AddView(compassTextView);
-
-
-            // mainLayout = FindViewById<FrameLayout>(sensorviz_xamarin.Resource.Id.mainLayout1);
-        }
+            // Register a listeners
+            sensorService.RegisterListener(proximity, lightSensor, Android.Hardware.SensorDelay.Game);
+            sensorService.RegisterListener(compass, ori, SensorDelay.Fastest);
+        
+         }
 
         public void OnSurfaceTextureAvailable(Android.Graphics.SurfaceTexture surface, int w, int h)
         {
@@ -125,24 +93,6 @@ namespace TextureViewCameraStream
         {
 
         }
-
-
-        public void OnSensorChanged(SensorEvent s)
-        {
-            lock (_syncLock)
-            {
-                proximityTextView.Text = string.Format("Brightness={0:f}", s.Values[0]);
-
-                proximityLayout.Alpha = (float)0.05 * s.Values[0];
-
-            }
-        }
-
-        public void OnAccuracyChanged(Sensor sensor, SensorStatus accuracy)
-        {
-            // Your processing here
-        }
-
 
     }
 }
