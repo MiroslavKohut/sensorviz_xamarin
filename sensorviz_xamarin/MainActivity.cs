@@ -31,7 +31,7 @@ namespace TextureViewCameraStream
         {
             base.OnCreate(bundle);
             Window.RequestFeature(WindowFeatures.NoTitle);
-          
+
             SetContentView(sensorviz_xamarin.Resource.Layout.Main);
 
             //add camera texture view
@@ -48,15 +48,15 @@ namespace TextureViewCameraStream
 
             //get Sensor manager
             var sensorService = (SensorManager)GetSystemService(Context.SensorService);
-            
+
             var lightSensor = sensorService.GetDefaultSensor(SensorType.Light); // Get a Light Sensor
             var ori = sensorService.GetDefaultSensor(SensorType.Orientation);    //Get orientation
 
             // Register a listeners
             sensorService.RegisterListener(proximity, lightSensor, Android.Hardware.SensorDelay.Game);
             sensorService.RegisterListener(compass, ori, SensorDelay.Fastest);
-        
-         }
+
+        }
 
         public void OnSurfaceTextureAvailable(Android.Graphics.SurfaceTexture surface, int w, int h)
         {
