@@ -28,6 +28,9 @@ namespace TextureViewCameraStream
         TextView proximityTextView;
         LinearLayout proximityLayout;
 
+        TextView compassTextView;
+        LinearLayout compassLayout;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -62,7 +65,7 @@ namespace TextureViewCameraStream
             SetContentView(sensorviz_xamarin.Resource.Layout.Main);
             textureView = FindViewById<TextureView>(sensorviz_xamarin.Resource.Id.textureView1);
             textureView.SurfaceTextureListener = this;
-           
+
             //add proximity layout
             proximityLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.proximity);
 
@@ -73,8 +76,18 @@ namespace TextureViewCameraStream
 
             proximityLayout.AddView(proximityTextView);
 
+            //add compass layout
+            compassLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.compass);
 
-            mainLayout = FindViewById<FrameLayout>(sensorviz_xamarin.Resource.Id.mainLayout1);
+            compassTextView = new TextView(compassLayout.Context);
+            compassTextView.Text = "compass";
+            compassTextView.SetBackgroundColor(Android.Graphics.Color.Yellow);
+            compassTextView.SetTextColor(Android.Graphics.Color.DarkGray);
+
+            compassLayout.AddView(compassTextView);
+
+
+            // mainLayout = FindViewById<FrameLayout>(sensorviz_xamarin.Resource.Id.mainLayout1);
         }
 
         public void OnSurfaceTextureAvailable(Android.Graphics.SurfaceTexture surface, int w, int h)
@@ -119,9 +132,9 @@ namespace TextureViewCameraStream
             lock (_syncLock)
             {
                 proximityTextView.Text = string.Format("Brightness={0:f}", s.Values[0]);
-              
+
                 proximityLayout.Alpha = (float)0.05 * s.Values[0];
-                
+
             }
         }
 

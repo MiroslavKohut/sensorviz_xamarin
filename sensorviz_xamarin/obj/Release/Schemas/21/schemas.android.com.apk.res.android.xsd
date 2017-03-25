@@ -2,11 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v21</xs:documentation>
-<<<<<<< HEAD
-    <xs:documentation>23.3.2017 15:19:37</xs:documentation>
-=======
-    <xs:documentation>17.3.2017 18:46:18</xs:documentation>
->>>>>>> 211603ff704e3750ef04014b8cf9fd69ff0e4160
+    <xs:documentation>25.3.2017 8:45:15</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16307,18 +16303,12 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/timePicker1" />
-<<<<<<< HEAD
             <xs:enumeration value="@id/accelerometer" />
             <xs:enumeration value="@id/compass" />
             <xs:enumeration value="@id/gps" />
+            <xs:enumeration value="@id/mainLayout1" />
             <xs:enumeration value="@id/proximity" />
-            <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textureView1" />
-=======
-            <xs:enumeration value="@id/relativeLayout1" />
-            <xs:enumeration value="@id/textureView1" />
-            <xs:enumeration value="@id/textView1" />
->>>>>>> 211603ff704e3750ef04014b8cf9fd69ff0e4160
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />

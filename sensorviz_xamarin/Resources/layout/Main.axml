@@ -4,25 +4,21 @@
     p1:minHeight="25px"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
-<<<<<<< HEAD
     p1:id="@+id/mainLayout1">
-=======
-    p1:id="@+id/relativeLayout1">
+
+   
 <!--vlavo hore-->
->>>>>>> 211603ff704e3750ef04014b8cf9fd69ff0e4160
+
     <TextureView
         p1:layout_width="match_parent"
         p1:layout_height="match_parent"
         p1:layout_marginBottom="0.0dp"
         p1:layout_marginRight="0dp"
         p1:id="@+id/textureView1" />
-<<<<<<< HEAD
+
 <!--vlavo hore-->
   <LinearLayout
         p1:id="@+id/compass"
-=======
-    <LinearLayout
->>>>>>> 211603ff704e3750ef04014b8cf9fd69ff0e4160
         p1:layout_width="150.0dp"
         p1:layout_height="150.0dp"
         p1:layout_marginLeft="0dp"
@@ -73,7 +69,8 @@
       p1:layout_marginTop="200dp"
       p1:layout_alignParentRight="true"
       p1:layout_gravity="bottom|right"
-      p1:orientation="vertical">
+      p1:orientation="vertical"
+     p1:background="@color/biely_layout">
 
   </LinearLayout>
 </FrameLayout>
