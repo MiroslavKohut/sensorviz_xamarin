@@ -15,6 +15,9 @@ public final class R {
     }
     public static final class drawable {
         public static final int icon=0x7f020000;
+        public static final int light_off=0x7f020001;
+        public static final int light_on=0x7f020002;
+        public static final int sound=0x7f020003;
     }
     public static final class id {
         public static final int accelerometer=0x7f060005;

@@ -59,14 +59,16 @@ namespace TextureViewCameraStream
             //get Sensor manager
             var sensorService = (SensorManager)GetSystemService(Context.SensorService);
 
+            var proximitySensor = sensorService.GetDefaultSensor(SensorType.Proximity);
             var lightSensor = sensorService.GetDefaultSensor(SensorType.Light); // Get a Light Sensor
             var ori = sensorService.GetDefaultSensor(SensorType.Orientation);    //Get orientation
             var acc = sensorService.GetDefaultSensor(SensorType.Accelerometer);    //Get orientation
 
             // Register a listeners
+           sensorService.RegisterListener(proximity, proximitySensor, Android.Hardware.SensorDelay.Normal);
             sensorService.RegisterListener(light, lightSensor, Android.Hardware.SensorDelay.Game);
-            sensorService.RegisterListener(accelerometer, acc, SensorDelay.Fastest);
             sensorService.RegisterListener(compass, ori, SensorDelay.Fastest);
+            sensorService.RegisterListener(accelerometer, acc, SensorDelay.Fastest);
 
         }
 
