@@ -1,9 +1,11 @@
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\sensorviz_xamarin.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\Java.Interop.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\Mono.Android.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\mscorlib.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Core.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Xml.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Runtime.Serialization.dll
-C:\Users\Miroslav Kohut\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.ServiceModel.Internals.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\sensorviz_xamarin.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\Java.Interop.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\Mono.Android.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\mscorlib.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Core.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Xml.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\OxyPlot.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\OxyPlot.Xamarin.Android.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.Runtime.Serialization.dll
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\System.ServiceModel.Internals.dll

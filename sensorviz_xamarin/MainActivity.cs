@@ -23,6 +23,8 @@ namespace TextureViewCameraStream
     {
         CompassView compass;
         ProximityView proximity;
+        LightView light;
+        AccelerometerView accelerometer;
 
         Camera camera;
         TextureView textureView;
@@ -39,6 +41,10 @@ namespace TextureViewCameraStream
             textureView.SurfaceTextureListener = this;
 
             //add proximity layout 
+            LinearLayout lightLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.light);
+            light = new LightView(lightLayout);
+
+            //add proximity layout 
             LinearLayout proximityLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.proximity);
             proximity = new ProximityView(proximityLayout);
 
@@ -46,14 +52,20 @@ namespace TextureViewCameraStream
             LinearLayout compassLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.compass);
             compass = new CompassView(compassLayout);
 
+            //add accelerometer layout
+            LinearLayout accelerometerLayout = FindViewById<LinearLayout>(sensorviz_xamarin.Resource.Id.accelerometer);
+            accelerometer = new AccelerometerView(accelerometerLayout);
+
             //get Sensor manager
             var sensorService = (SensorManager)GetSystemService(Context.SensorService);
 
             var lightSensor = sensorService.GetDefaultSensor(SensorType.Light); // Get a Light Sensor
             var ori = sensorService.GetDefaultSensor(SensorType.Orientation);    //Get orientation
+            var acc = sensorService.GetDefaultSensor(SensorType.Accelerometer);    //Get orientation
 
             // Register a listeners
-            sensorService.RegisterListener(proximity, lightSensor, Android.Hardware.SensorDelay.Game);
+            sensorService.RegisterListener(light, lightSensor, Android.Hardware.SensorDelay.Game);
+            sensorService.RegisterListener(accelerometer, acc, SensorDelay.Fastest);
             sensorService.RegisterListener(compass, ori, SensorDelay.Fastest);
 
         }

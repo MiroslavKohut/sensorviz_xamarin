@@ -99,6 +99,8 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "sensorviz_xamarin.dll" comes first in this list. */
 		"sensorviz_xamarin.dll",
+		"OxyPlot.dll",
+		"OxyPlot.Xamarin.Android.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

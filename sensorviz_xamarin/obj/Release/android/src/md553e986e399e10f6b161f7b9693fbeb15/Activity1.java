@@ -5,8 +5,7 @@ public class Activity1
 	extends android.app.Activity
 	implements
 		mono.android.IGCUserPeer,
-		android.view.TextureView.SurfaceTextureListener,
-		android.hardware.SensorEventListener
+		android.view.TextureView.SurfaceTextureListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -17,8 +16,6 @@ public class Activity1
 			"n_onSurfaceTextureDestroyed:(Landroid/graphics/SurfaceTexture;)Z:GetOnSurfaceTextureDestroyed_Landroid_graphics_SurfaceTexture_Handler:Android.Views.TextureView/ISurfaceTextureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onSurfaceTextureSizeChanged:(Landroid/graphics/SurfaceTexture;II)V:GetOnSurfaceTextureSizeChanged_Landroid_graphics_SurfaceTexture_IIHandler:Android.Views.TextureView/ISurfaceTextureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onSurfaceTextureUpdated:(Landroid/graphics/SurfaceTexture;)V:GetOnSurfaceTextureUpdated_Landroid_graphics_SurfaceTexture_Handler:Android.Views.TextureView/ISurfaceTextureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
-			"n_onAccuracyChanged:(Landroid/hardware/Sensor;I)V:GetOnAccuracyChanged_Landroid_hardware_Sensor_IHandler:Android.Hardware.ISensorEventListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
-			"n_onSensorChanged:(Landroid/hardware/SensorEvent;)V:GetOnSensorChanged_Landroid_hardware_SensorEvent_Handler:Android.Hardware.ISensorEventListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("TextureViewCameraStream.Activity1, sensorviz_xamarin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", Activity1.class, __md_methods);
 	}
@@ -70,22 +67,6 @@ public class Activity1
 	}
 
 	private native void n_onSurfaceTextureUpdated (android.graphics.SurfaceTexture p0);
-
-
-	public void onAccuracyChanged (android.hardware.Sensor p0, int p1)
-	{
-		n_onAccuracyChanged (p0, p1);
-	}
-
-	private native void n_onAccuracyChanged (android.hardware.Sensor p0, int p1);
-
-
-	public void onSensorChanged (android.hardware.SensorEvent p0)
-	{
-		n_onSensorChanged (p0);
-	}
-
-	private native void n_onSensorChanged (android.hardware.SensorEvent p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

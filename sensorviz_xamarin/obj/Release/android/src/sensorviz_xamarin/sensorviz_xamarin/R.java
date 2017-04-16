@@ -17,11 +17,11 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int accelerometer=0x7f060004;
+        public static final int accelerometer=0x7f060005;
         public static final int compass=0x7f060002;
-        public static final int gps=0x7f060005;
+        public static final int light=0x7f060003;
         public static final int mainLayout1=0x7f060000;
-        public static final int proximity=0x7f060003;
+        public static final int proximity=0x7f060004;
         public static final int textureView1=0x7f060001;
     }
     public static final class layout {
