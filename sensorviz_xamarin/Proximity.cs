@@ -27,9 +27,9 @@ namespace sensorviz_xamarin
             proximityTextView = new TextView(layout.Context);
             imageView = new ImageView(layout.Context);
 
-            proximityTextView.Text = "proximity";
-            proximityTextView.TextSize = (float)18;
-            proximityTextView.SetTextColor(Android.Graphics.Color.Black);
+            //proximityTextView.Text = "proximity";
+            //proximityTextView.TextSize = (float)18;
+            //proximityTextView.SetTextColor(Android.Graphics.Color.Black);
 
             layout.AddView(proximityTextView);
             layout.AddView(imageView);

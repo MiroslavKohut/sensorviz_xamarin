@@ -14,6 +14,7 @@ using Android.Media;
 
 namespace sensorviz_xamarin
 {
+
     class LightView : View, Android.Hardware.ISensorEventListener
     {
         LinearLayout lightLayout;

@@ -76,8 +76,8 @@ C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorvi
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\bin\Release\OxyPlot.Xamarin.Android.xml
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\bin\Release\OxyPlot.dll.mdb
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\android\assets\OxyPlot.dll.mdb
-C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\res\drawable\light_off.jpg
-C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\res\drawable\light_on.jpg
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\res\drawable\sound.mp3
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\res\drawable\light_on.png
+C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\res\drawable\light_off.png
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\obj\Release\sensorviz_xamarin.dll.mdb
 C:\Users\Michal\Documents\Visual Studio 2015\Projects\sensorviz_xamarin\sensorviz_xamarin\bin\Release\sensorviz_xamarin.dll.mdb

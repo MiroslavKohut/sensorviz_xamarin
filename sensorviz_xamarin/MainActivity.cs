@@ -26,7 +26,15 @@ namespace TextureViewCameraStream
         LightView light;
         AccelerometerView accelerometer;
 
+        SensorManager sensorService;
+
+        Sensor proximitySensor;
+        Sensor lightSensor;
+        Sensor ori;
+        Sensor acc;
+
         Camera camera;
+
         TextureView textureView;
 
         protected override void OnCreate(Bundle bundle)
@@ -57,18 +65,39 @@ namespace TextureViewCameraStream
             accelerometer = new AccelerometerView(accelerometerLayout);
 
             //get Sensor manager
-            var sensorService = (SensorManager)GetSystemService(Context.SensorService);
+            sensorService = (SensorManager)GetSystemService(Context.SensorService);
 
-            var proximitySensor = sensorService.GetDefaultSensor(SensorType.Proximity);
-            var lightSensor = sensorService.GetDefaultSensor(SensorType.Light); // Get a Light Sensor
-            var ori = sensorService.GetDefaultSensor(SensorType.Orientation);    //Get orientation
-            var acc = sensorService.GetDefaultSensor(SensorType.Accelerometer);    //Get orientation
+            proximitySensor = sensorService.GetDefaultSensor(SensorType.Proximity);
+            lightSensor = sensorService.GetDefaultSensor(SensorType.Light); // Get a Light Sensor
+            ori = sensorService.GetDefaultSensor(SensorType.Orientation);    //Get orientation
+            acc = sensorService.GetDefaultSensor(SensorType.Accelerometer);    //Get orientation
 
             // Register a listeners
-           sensorService.RegisterListener(proximity, proximitySensor, Android.Hardware.SensorDelay.Normal);
+            sensorService.RegisterListener(proximity, proximitySensor, Android.Hardware.SensorDelay.Normal);
             sensorService.RegisterListener(light, lightSensor, Android.Hardware.SensorDelay.Game);
             sensorService.RegisterListener(compass, ori, SensorDelay.Fastest);
             sensorService.RegisterListener(accelerometer, acc, SensorDelay.Fastest);
+
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            // Register a listeners
+            sensorService.RegisterListener(proximity, proximitySensor, Android.Hardware.SensorDelay.Normal);
+            sensorService.RegisterListener(light, lightSensor, Android.Hardware.SensorDelay.Game);
+            sensorService.RegisterListener(compass, ori, SensorDelay.Fastest);
+            sensorService.RegisterListener(accelerometer, acc, SensorDelay.Fastest);
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+            sensorService.UnregisterListener(proximity);
+            sensorService.UnregisterListener(light);
+            sensorService.UnregisterListener(compass);
+            sensorService.UnregisterListener(accelerometer);
 
         }
 
